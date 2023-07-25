@@ -1,0 +1,27 @@
+main{
+    font-family: "lato" sans-serif;
+}
+.new{
+    margin: 70px 0 0 570px;
+    font-size: 25px;
+}
+.part-1{
+    margin:100px 20px 20px 300px;
+    float: left;
+}
+.part-2{
+    margin:100px 300px 20px 20px;
+    float: right;
+}
+.player{
+    font-size: 30px;
+    margin: 10px;
+    text-align: center;
+}
+.global{
+    font-size: 50px;
+    text-align: center;
+}
+.round{
+    width: 25%;
+}
