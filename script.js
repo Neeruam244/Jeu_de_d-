@@ -1,4 +1,4 @@
-var scores, roundScore, activePlayer, gamePlaying;
+var scores, roundScore, activePlayer, gamePlaying, currentDiceValue;
 
   function init() {
     scores = [0, 0];
@@ -33,9 +33,10 @@ var scores, roundScore, activePlayer, gamePlaying;
   function rollDice() {
     if (gamePlaying) {
       var dice = Math.floor(Math.random() * 6) + 1;
-      var diceDOM = document.createElement("img");
+      currentDiceValue = dice;
+      var diceDOM = document.getElementById("dice");
+      diceDOM.style.display = "block";
       diceDOM.src = "dice-" + dice + ".png";
-      document.body.appendChild(diceDOM);
 
       if (dice !== 1) {
         roundScore += dice;
@@ -43,14 +44,7 @@ var scores, roundScore, activePlayer, gamePlaying;
       } else {
         switchPlayer();
       }
-      setTimeout(function() {
-        document.getElementById("dice").style.display = "none";
-      }, 1000); // Le dé sera masqué après 1 seconde (1000 millisecondes)
-    }
-  }
-
-
-
+  }}
 
   function hold() {
     if (gamePlaying) {
@@ -64,6 +58,7 @@ var scores, roundScore, activePlayer, gamePlaying;
         document.getElementById("hold-2").disabled = true;
         document.getElementById("round-score-" + (activePlayer + 1)).textContent = "Winner!";
         gamePlaying = false;
+        document.getElementById("new-game").disabled = false;
       } else {
         switchPlayer();
       }

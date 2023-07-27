@@ -2,16 +2,14 @@ main{
     font-family: "lato" sans-serif;
 }
 .new{
-    margin: 70px 0 0 570px;
+    margin: 70px 20px 20px 90px;
     font-size: 25px;
 }
 .part-1{
-    margin:100px 20px 20px 300px;
-    float: left;
+    margin:50px 20px 20px 20px;
 }
 .part-2{
-    margin:100px 300px 20px 20px;
-    float: right;
+    margin:50px 20px 20px 20px;
 }
 .player{
     font-size: 30px;
@@ -24,4 +22,35 @@ main{
 }
 .round{
     width: 25%;
+}
+@media screen and (min-width: 768px){
+    .new{
+        margin: 70px 0 0 570px;
+        font-size: 25px;
+    }
+    .part-1{
+        margin:100px 20px 20px 300px;
+        float: left;
+    }
+    .part-2{
+        margin:100px 300px 20px 20px;
+        float: right;
+    }
+    .dice{
+        margin: 50px 10px 10px 70px;
+    }
+}
+@media screen and (min-width: 1600px){
+    .new{
+        margin: 70px 0 0 850px;
+        font-size: 25px;
+    }
+    .part-1{
+        margin:100px 20px 20px 500px;
+        float: left;
+    }
+    .part-2{
+        margin:100px 500px 20px 20px;
+        float: right;
+    }
 }
